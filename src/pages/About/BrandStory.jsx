@@ -9,7 +9,7 @@ export default function BrandStory() {
       <div className="absolute inset-0 z-0">
         <img
           src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1600&q=80"
-          alt="Élite Estates Brand Story"
+          alt="Domaine Brand Story"
           className="w-full h-full object-cover opacity-30"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-estate-dark via-estate-dark/80 to-estate-dark" />
@@ -42,7 +42,7 @@ export default function BrandStory() {
             transition={{ delay: 0.8, duration: 0.8 }}
           >
             <p className="text-estate-muted font-sans text-lg leading-relaxed mb-6">
-              Founded in 1999, Élite Estates emerged from a simple observation: the luxury real estate market had become entirely transactional. We set out to change that by reintroducing the art of curation and the importance of personal connection.
+              Founded in 1999, Domaine emerged from a simple observation: the luxury real estate market had become entirely transactional. We set out to change that by reintroducing the art of curation and the importance of personal connection.
             </p>
             <p className="text-estate-muted font-sans text-lg leading-relaxed">
               Today, we represent the world's most exceptional properties and the discerning individuals who seek them. Our approach goes beyond square footage and amenities; we look for the soul of a property, the provenance of its architecture, and the lifestyle it enables.

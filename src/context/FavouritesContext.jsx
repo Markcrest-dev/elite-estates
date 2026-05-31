@@ -4,12 +4,12 @@ const FavouritesContext = createContext();
 
 export function FavouritesProvider({ children }) {
   const [favourites, setFavourites] = useState(
-    () => JSON.parse(localStorage.getItem('elite-favourites') || '[]')
+    () => JSON.parse(localStorage.getItem('domaine-favourites') || '[]')
   );
 
   const toggle = (id) => setFavourites(prev => {
     const next = prev.includes(id) ? prev.filter(f => f !== id) : [...prev, id];
-    localStorage.setItem('elite-favourites', JSON.stringify(next));
+    localStorage.setItem('domaine-favourites', JSON.stringify(next));
     return next;
   });
 

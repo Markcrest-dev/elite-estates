@@ -44,7 +44,7 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-4 md:px-8 h-20 flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="font-serif text-2xl text-estate-cream hover:text-gold transition-colors">
-            Élite <span className="text-gold">Estates</span>
+            Domaine
           </Link>
 
           {/* Desktop Links */}

@@ -6,7 +6,7 @@ export default function Footer() {
     <footer className="bg-estate-dark border-t border-white/5 py-16 px-4 md:px-8">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
         <div className="md:col-span-2">
-          <Link to="/" className="font-serif text-2xl text-estate-cream mb-4 block">Élite <span className="text-gold">Estates</span></Link>
+          <Link to="/" className="font-serif text-2xl text-estate-cream mb-4 block">Domaine</Link>
           <p className="text-estate-muted font-sans text-sm leading-relaxed max-w-md">Redefining luxury real estate since 1999. We curate the finest properties for discerning clients who demand excellence in every detail.</p>
           <div className="mt-6 flex gap-4">
             {['Twitter', 'Instagram', 'LinkedIn'].map((s) => (
@@ -34,12 +34,12 @@ export default function Footer() {
           <ul className="space-y-3 text-estate-muted text-sm font-sans">
             <li className="flex items-center gap-2"><MapPin size={14} className="text-gold" />Beverly Hills, CA 90210</li>
             <li className="flex items-center gap-2"><Phone size={14} className="text-gold" />+1 (310) 555-0199</li>
-            <li className="flex items-center gap-2"><Mail size={14} className="text-gold" />hello@eliteestates.com</li>
+            <li className="flex items-center gap-2"><Mail size={14} className="text-gold" />hello@domaine.com</li>
           </ul>
         </div>
       </div>
       <div className="max-w-7xl mx-auto mt-12 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
-        <p className="text-estate-muted text-xs font-sans">© 2026 Élite Estates. All rights reserved.</p>
+        <p className="text-estate-muted text-xs font-sans">© 2026 Domaine. All rights reserved.</p>
         <div className="flex gap-6">
           {['Privacy Policy', 'Terms of Service'].map((t) => (
             <a key={t} href="#" className="text-estate-muted hover:text-estate-cream transition-colors text-xs font-sans">{t}</a>

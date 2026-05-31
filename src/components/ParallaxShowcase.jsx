@@ -39,7 +39,7 @@ export default function ParallaxShowcase() {
           <div className="w-16 h-[1px] bg-gold mx-auto mt-8" />
 
           <p className="mt-6 text-estate-muted font-sans text-sm uppercase tracking-[0.3em]">
-            Élite Estates
+            Domaine
           </p>
         </motion.div>
       </div>

@@ -2,7 +2,7 @@ import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 
 const milestones = [
-  { year: '1999', title: 'Founded', desc: 'Élite Estates opens its first office in Beverly Hills with a team of three agents.' },
+  { year: '1999', title: 'Founded', desc: 'Domaine opens its first office in Beverly Hills with a team of three agents.' },
   { year: '2004', title: 'First $10M Sale', desc: 'Shattered local records with the sale of a historic Bel Air estate.' },
   { year: '2010', title: 'Global Expansion', desc: 'Opened offices in London and Dubai to serve our international clientele.' },
   { year: '2015', title: 'New Development', desc: 'Launched a dedicated division for luxury high-rise developments in Manhattan.' },

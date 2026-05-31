@@ -15,7 +15,7 @@ export default function WhyChooseUs() {
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         <Parallax speed={-8}>
           <motion.div initial={{ opacity: 0, x: -40 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }} viewport={{ once: true }} className="relative">
-            <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1200&q=80" alt="Élite Estates Office" loading="lazy" className="w-full h-[600px] object-cover" />
+            <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1200&q=80" alt="Domaine Office" loading="lazy" className="w-full h-[600px] object-cover" />
             <div className="absolute -bottom-4 -right-4 w-full h-full border border-gold/30 -z-10" />
             <div className="absolute -bottom-6 -left-6 bg-gold text-estate-dark px-6 py-4">
               <div className="text-3xl font-serif font-light">25+</div>

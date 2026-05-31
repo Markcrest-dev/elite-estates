@@ -28,7 +28,7 @@ export default function CareersCallout() {
           Ready to Elevate Your <span className="italic text-gold-light">Career?</span>
         </h2>
         <p className="text-estate-muted font-sans text-lg mb-10 max-w-2xl mx-auto">
-          We are always looking for exceptional talent. If you share our commitment to excellence and discretion, we invite you to explore opportunities with Élite Estates.
+          We are always looking for exceptional talent. If you share our commitment to excellence and discretion, we invite you to explore opportunities with Domaine.
         </p>
         <motion.button
           whileHover={{ scale: 1.02 }}

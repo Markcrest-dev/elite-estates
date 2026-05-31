@@ -11,7 +11,7 @@ export const agents = [
     avgPrice: '$6.2M',
     yearsExp: 18,
     rating: 4.9,
-    email: 'victoria@eliteestates.com',
+    email: 'victoria@domaine.com',
     phone: '+1 (310) 555-0101',
     testimonials: [
       { client: 'James & Sarah Mitchell', photo: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=80', quote: 'Victoria found us our dream home in Beverly Hills when every other agent said it was impossible. Her network and persistence are unmatched.', property: '12 Sunset Blvd' },
@@ -30,7 +30,7 @@ export const agents = [
     avgPrice: '$4.8M',
     yearsExp: 15,
     rating: 4.8,
-    email: 'marcus@eliteestates.com',
+    email: 'marcus@domaine.com',
     phone: '+1 (305) 555-0102',
     testimonials: [
       { client: 'The Liu Family', photo: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&q=80', quote: 'Marcus made our relocation from Shanghai seamless. He understood both the cultural nuances and the investment potential of every property we viewed.', property: '88 Ocean Drive' },
@@ -49,7 +49,7 @@ export const agents = [
     avgPrice: '$5.1M',
     yearsExp: 12,
     rating: 5.0,
-    email: 'catherine@eliteestates.com',
+    email: 'catherine@domaine.com',
     phone: '+1 (312) 555-0103',
     testimonials: [
       { client: 'William & Grace Harrington', photo: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=200&q=80', quote: 'Catherine found us a lakefront masterpiece that perfectly blends historic charm with modern luxury. Her eye for detail is extraordinary.', property: '5 Lakeview Terrace' },
@@ -68,7 +68,7 @@ export const agents = [
     avgPrice: '$3.9M',
     yearsExp: 10,
     rating: 4.7,
-    email: 'alexander@eliteestates.com',
+    email: 'alexander@domaine.com',
     phone: '+1 (212) 555-0104',
     testimonials: [
       { client: 'Sophia Marchetti', photo: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&q=80', quote: 'Alexander secured us a Park Avenue apartment before it even hit the market. His developer connections are invaluable.', property: '220 Park Avenue' },
@@ -86,7 +86,7 @@ export const agents = [
     avgPrice: '$2.8M',
     yearsExp: 14,
     rating: 4.9,
-    email: 'isabella@eliteestates.com',
+    email: 'isabella@domaine.com',
     phone: '+1 (561) 555-0105',
     testimonials: [
       { client: 'The Henderson Family', photo: 'https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?w=200&q=80', quote: 'Isabella didn\'t just find us a house — she found us a home and a community. Our kids love their new school, and we love our new life.', property: '45 Coral Way' },
@@ -104,7 +104,7 @@ export const agents = [
     avgPrice: '$7.1M',
     yearsExp: 11,
     rating: 4.8,
-    email: 'jonathan@eliteestates.com',
+    email: 'jonathan@domaine.com',
     phone: '+1 (970) 555-0106',
     testimonials: [
       { client: 'Michael & Lauren Ashford', photo: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=200&q=80', quote: 'Jonathan\'s knowledge of the Aspen market is encyclopedic. He found us a ski-in/ski-out property that exceeded every expectation.', property: '78 Bellevue Rd' },

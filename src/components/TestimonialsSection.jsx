@@ -4,7 +4,7 @@ const testimonials = [
   {
     name: 'Eleanor Vance',
     role: 'Homeowner',
-    text: 'Élite Estates made the process of finding our dream home seamless and extraordinary. Their attention to detail and curated selection of properties is unmatched.',
+    text: 'Domaine made the process of finding our dream home seamless and extraordinary. Their attention to detail and curated selection of properties is unmatched.',
   },
   {
     name: 'Marcus Sterling',
