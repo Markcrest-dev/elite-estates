@@ -16,13 +16,16 @@ import FavouritesPage from './pages/Favourites/FavouritesPage';
 import AboutPage from './pages/About/AboutPage';
 import VirtualTourPage from './pages/VirtualTour/VirtualTourPage';
 import ScrollToTop from './components/ScrollToTop';
+import CustomCursor from './components/CustomCursor';
 
 function App() {
   return (
     <BrowserRouter>
+      <CustomCursor />
       <FavouritesProvider>
         <ParallaxProvider>
           <ScrollToTop />
+          <div className="noise-overlay" />
           <div className="min-h-screen">
             <Navbar />
             <AnimatePresence mode="wait">

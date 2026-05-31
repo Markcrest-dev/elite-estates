@@ -10,6 +10,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    cursor: none !important;
   }
 
   html {
@@ -19,7 +20,7 @@
   }
 
   body {
-    background-color: #0d0d0d;
+    background-color: #0a0a0c;
     color: #f9f6f1;
     font-family: 'DM Sans', sans-serif;
     overflow-x: hidden;
@@ -27,27 +28,40 @@
 
   ::selection {
     background-color: #c9a84c;
-    color: #0d0d0d;
+    color: #0a0a0c;
   }
 }
 
 @layer components {
   .glass-card {
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.01) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3), inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
   }
 
   .gold-gradient {
-    background: linear-gradient(135deg, #c9a84c 0%, #e8c96a 50%, #c9a84c 100%);
+    background: linear-gradient(135deg, #b8933b 0%, #e8c96a 30%, #c9a84c 70%, #8a6a24 100%);
   }
 
   .text-gold-gradient {
-    background: linear-gradient(135deg, #c9a84c, #e8c96a);
+    background: linear-gradient(135deg, #b8933b 0%, #e8c96a 30%, #c9a84c 70%, #8a6a24 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+  }
+
+  .noise-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.03;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
   }
 }
 
@@ -57,7 +71,7 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #0d0d0d;
+  background: #0a0a0c;
 }
 
 ::-webkit-scrollbar-thumb {

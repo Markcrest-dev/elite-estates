@@ -1,4 +1,4 @@
-import { motion, useMotionValue, useTransform } from 'framer-motion';
+import { motion, useMotionValue, useTransform, useSpring } from 'framer-motion';
 import { BedDouble, Bath, Maximize } from 'lucide-react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
@@ -12,9 +12,23 @@ const cardVariants = {
 export default function PropertyCard({ id, image, price, address, beds, baths, sqft }) {
   const x = useMotionValue(0);
   const y = useMotionValue(0);
-  const rotateX = useTransform(y, [-0.5, 0.5], [8, -8]);
-  const rotateY = useTransform(x, [-0.5, 0.5], [-8, 8]);
-  const [mousePos, setMousePos] = useState({ x: 50, y: 50 });
+  
+  const springConfig = { damping: 20, stiffness: 150, mass: 0.5 };
+  const springX = useSpring(x, springConfig);
+  const springY = useSpring(y, springConfig);
+
+  const rotateX = useTransform(springY, [-0.5, 0.5], [10, -10]);
+  const rotateY = useTransform(springX, [-0.5, 0.5], [-10, 10]);
+  
+  const mousePosX = useMotionValue(50);
+  const mousePosY = useMotionValue(50);
+  const springMouseX = useSpring(mousePosX, { damping: 20, stiffness: 200 });
+  const springMouseY = useSpring(mousePosY, { damping: 20, stiffness: 200 });
+  
+  const gradientX = useTransform(springMouseX, v => `${v}%`);
+  const gradientY = useTransform(springMouseY, v => `${v}%`);
+  
+  const [isHovered, setIsHovered] = useState(false);
 
   const handleMouseMove = (e) => {
     const rect = e.currentTarget.getBoundingClientRect();
@@ -22,19 +36,23 @@ export default function PropertyCard({ id, image, price, address, beds, baths, s
     const py = (e.clientY - rect.top) / rect.height;
     x.set(px - 0.5);
     y.set(py - 0.5);
-    setMousePos({ x: px * 100, y: py * 100 });
+    mousePosX.set(px * 100);
+    mousePosY.set(py * 100);
   };
 
   const handleMouseLeave = () => {
     x.set(0);
     y.set(0);
-    setMousePos({ x: 50, y: 50 });
+    mousePosX.set(50);
+    mousePosY.set(50);
+    setIsHovered(false);
   };
 
   return (
     <motion.div
       variants={cardVariants}
       onMouseMove={handleMouseMove}
+      onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={handleMouseLeave}
       whileHover={{ scale: 1.02 }}
       style={{
@@ -47,10 +65,14 @@ export default function PropertyCard({ id, image, price, address, beds, baths, s
     >
       <Link to={`/property/${id}`} className="block">
         {/* Glossy highlight overlay */}
-        <div
-          className="absolute inset-0 z-30 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+        <motion.div
+          className="absolute inset-0 z-30 pointer-events-none transition-opacity duration-300"
           style={{
-            background: `radial-gradient(circle at ${mousePos.x}% ${mousePos.y}%, rgba(201,168,76,0.15) 0%, transparent 60%)`,
+            background: useTransform(
+              [gradientX, gradientY],
+              ([gx, gy]) => `radial-gradient(circle at ${gx} ${gy}, rgba(255,255,255,0.1) 0%, transparent 50%)`
+            ),
+            opacity: isHovered ? 1 : 0
           }}
         />
 

@@ -10,7 +10,7 @@ export default {
         gold: '#c9a84c',
         'gold-light': '#e8c96a',
         estate: {
-          dark: '#0d0d0d',
+          dark: '#0a0a0c',
           cream: '#f9f6f1',
           muted: '#999999',
         }

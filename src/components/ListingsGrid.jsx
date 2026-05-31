@@ -13,8 +13,11 @@ const containerVariants = {
 
 export default function ListingsGrid() {
   return (
-    <section id="listings" className="py-24 px-4 md:px-8">
-      <div className="max-w-7xl mx-auto">
+    <section id="listings" className="relative py-24 px-4 md:px-8">
+      {/* Ambient Glow */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gold/5 blur-[120px] rounded-full pointer-events-none z-0" />
+      
+      <div className="relative z-10 max-w-7xl mx-auto">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
