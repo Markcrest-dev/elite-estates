@@ -24,7 +24,7 @@ const pillars = [
 
 export default function MissionValues() {
   return (
-    <section className="py-32 px-4 md:px-8 border-t border-white/5 bg-estate-dark">
+    <section className="py-32 px-4 md:px-8 border-t border-white/5 bg-transparent">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

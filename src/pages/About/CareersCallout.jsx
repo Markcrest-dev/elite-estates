@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 
 export default function CareersCallout() {
   return (
-    <section className="relative py-32 px-4 overflow-hidden border-b border-white/5 bg-estate-dark">
+    <section className="relative py-32 px-4 overflow-hidden border-b border-white/5 bg-transparent">
       {/* Animated background orbs */}
       <div className="absolute inset-0 z-0 overflow-hidden opacity-30">
         <motion.div

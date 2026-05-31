@@ -17,6 +17,7 @@ import AboutPage from './pages/About/AboutPage';
 import VirtualTourPage from './pages/VirtualTour/VirtualTourPage';
 import ScrollToTop from './components/ScrollToTop';
 import CustomCursor from './components/CustomCursor';
+import PageBackground from './components/PageBackground';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <ParallaxProvider>
           <ScrollToTop />
           <div className="noise-overlay" />
+          <PageBackground />
           <div className="min-h-screen">
             <Navbar />
             <AnimatePresence mode="wait">
