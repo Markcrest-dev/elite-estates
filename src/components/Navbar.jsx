@@ -43,7 +43,7 @@ export default function Navbar() {
       >
         <div className="max-w-7xl mx-auto px-4 md:px-8 h-20 flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="font-serif text-2xl text-estate-cream hover:text-gold transition-colors overflow-hidden inline-flex">
+          <Link to="/" className="font-serif text-4xl navbar-logo transition-all duration-500 overflow-hidden inline-flex">
             {'Domaine'.split('').map((letter, i) => (
               <motion.span
                 key={i}
