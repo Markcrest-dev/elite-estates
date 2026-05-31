@@ -21,11 +21,16 @@ export default {
       },
       animation: {
         'fade-up': 'fadeUp 0.8s ease forwards',
+        'marquee': 'marquee 30s linear infinite',
       },
       keyframes: {
         fadeUp: {
           from: { opacity: 0, transform: 'translateY(30px)' },
           to: { opacity: 1, transform: 'translateY(0)' },
+        },
+        marquee: {
+          '0%': { transform: 'translateX(0%)' },
+          '100%': { transform: 'translateX(-50%)' },
         }
       }
     },

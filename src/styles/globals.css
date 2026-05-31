@@ -68,3 +68,8 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #e8c96a;
 }
+
+/* Base custom styles for webkit sliders (needed for cross-browser consistency in some cases) */
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
