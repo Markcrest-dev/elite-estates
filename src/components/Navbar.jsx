@@ -43,36 +43,65 @@ export default function Navbar() {
       >
         <div className="max-w-7xl mx-auto px-4 md:px-8 h-20 flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="font-serif text-2xl text-estate-cream hover:text-gold transition-colors">
-            Domaine
+          <Link to="/" className="font-serif text-2xl text-estate-cream hover:text-gold transition-colors overflow-hidden inline-flex">
+            {'Domaine'.split('').map((letter, i) => (
+              <motion.span
+                key={i}
+                initial={{ y: '100%', opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{
+                  duration: 0.6,
+                  delay: 0.8 + i * 0.05,
+                  ease: [0.16, 1, 0.3, 1],
+                }}
+                className="inline-block"
+              >
+                {letter}
+              </motion.span>
+            ))}
           </Link>
 
           {/* Desktop Links */}
           <div className="hidden lg:flex items-center gap-8">
-            {navLinks.map((link) => (
-              <Link
+            {navLinks.map((link, i) => (
+              <motion.div
                 key={link.to}
-                to={link.to}
-                className={`relative font-sans text-sm uppercase tracking-[0.15em] transition-colors duration-300 ${
-                  location.pathname === link.to
-                    ? 'text-gold'
-                    : 'text-estate-cream/70 hover:text-estate-cream'
-                }`}
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{
+                  duration: 0.5,
+                  delay: 1.2 + i * 0.07,
+                  ease: [0.16, 1, 0.3, 1],
+                }}
               >
-                {link.label}
-                {location.pathname === link.to && (
-                  <motion.div
-                    layoutId="nav-underline"
-                    className="absolute -bottom-1 left-0 right-0 h-[1px] bg-gold"
-                    transition={{ type: 'spring', stiffness: 300, damping: 30 }}
-                  />
-                )}
-              </Link>
+                <Link
+                  to={link.to}
+                  className={`relative font-sans text-sm uppercase tracking-[0.15em] transition-colors duration-300 ${
+                    location.pathname === link.to
+                      ? 'text-gold'
+                      : 'text-estate-cream/70 hover:text-estate-cream'
+                  }`}
+                >
+                  {link.label}
+                  {location.pathname === link.to && (
+                    <motion.div
+                      layoutId="nav-underline"
+                      className="absolute -bottom-1 left-0 right-0 h-[1px] bg-gold"
+                      transition={{ type: 'spring', stiffness: 300, damping: 30 }}
+                    />
+                  )}
+                </Link>
+              </motion.div>
             ))}
           </div>
 
           {/* Right icons */}
-          <div className="flex items-center gap-4">
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 1.6, ease: 'easeOut' }}
+            className="flex items-center gap-4"
+          >
             <Link to="/search" className="text-estate-cream/70 hover:text-gold transition-colors" aria-label="Search">
               <Search size={18} />
             </Link>
@@ -97,7 +126,7 @@ export default function Navbar() {
             >
               {mobileOpen ? <X size={22} /> : <Menu size={22} />}
             </button>
-          </div>
+          </motion.div>
         </div>
       </motion.nav>
 

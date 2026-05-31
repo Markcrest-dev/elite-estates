@@ -44,18 +44,29 @@ export default function HeroSection() {
         </motion.div>
 
         {/* Headline */}
-        <div className="overflow-hidden">
-          <motion.h1
-            initial={{ opacity: 0, y: '100%' }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
-            className="font-serif text-5xl md:text-7xl lg:text-8xl font-light leading-[1.1] max-w-4xl"
-          >
-            Find Your{' '}
-            <span className="italic text-gold-gradient">Dream</span>{' '}
-            Home
-          </motion.h1>
-        </div>
+        <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl font-light leading-[1.1] max-w-4xl flex flex-wrap justify-center gap-x-[0.3em]">
+          {[
+            { text: 'Find', italic: false, gold: false },
+            { text: 'Your', italic: false, gold: false },
+            { text: 'Dream', italic: true, gold: true },
+            { text: 'Home', italic: false, gold: false },
+          ].map((word, i) => (
+            <span key={i} className="overflow-hidden inline-block">
+              <motion.span
+                initial={{ y: '110%', rotateX: 40 }}
+                animate={{ y: 0, rotateX: 0 }}
+                transition={{
+                  duration: 1,
+                  delay: 0.3 + i * 0.12,
+                  ease: [0.16, 1, 0.3, 1],
+                }}
+                className={`inline-block ${word.italic ? 'italic' : ''} ${word.gold ? 'text-gold-gradient' : ''}`}
+              >
+                {word.text}
+              </motion.span>
+            </span>
+          ))}
+        </h1>
 
         {/* Subheadline */}
         <motion.p
